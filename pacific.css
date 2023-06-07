@@ -1,0 +1,154 @@
+/*
+File: pacific.css
+GUI Assignment 2: Style a Site with External CSS
+Masha Tsykora, UMass Lowell Computer Science, mary_tsykora@student.uml.edu
+Copyright (c) 2023 by Masha Tsykora. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+Updated on 6/7/23 at 5:10am.
+Instructor: Professor Wenjin Zhou
+Sources of Help: W3Schools and Javatpoint
+Brief Overview: I mimicked the webpage to the best of my ability. I used a grid layout to organize the page, 
+and played around with paddings and margins until it looked similar to the screenshots of the webpage given to us.
+However, I wasn't able to figure out how to display the image "sunset.jpg" within the header, and I wasn't able to properly display the paragraph and
+ul bulleted list on the side of the "coast.jpg" image and have it resize as the browser is resized.
+*/
+  
+
+  /* Here, I'm making the body of the webpage a linear gradient from white to blue that only covers 60% of the webpage.
+  The rest is a solid blue. */
+  body {
+	background: linear-gradient(white 0%, #00569f 60%);
+  }
+
+  /* Here, I'm making a #wrapper style block to act as my grid container and specify its layout */
+  #wrapper {
+	display: grid;
+	grid-template-rows: 4;
+	grid-template-columns: 6;
+	width: 80%;
+	margin: 30px auto 100px;
+	font-family: Arial, sans-serif;
+  }
+
+  /* Here, I'm making header stay within the first row, stretch from the 1st to 6th columns, and setting the background color
+  to a deep navy */
+  header {
+	grid-row: 1;
+	grid-column-start: 1;
+	grid-column-end: 6;
+	background-color: rgb(5, 5, 60);
+	/*background-color: linear-gradient(to right, rgb(5, 5, 60) 80%, white);*/
+  }
+
+  /* Here, I'm setting the text color to white and set the padding on the left side to 20px */
+  h1 {
+	color: white;
+	padding-left: 20px;
+  }
+
+  /* Here, I'm making the nav stretch from the second to fourth rows and stretch from the first to second columns */
+  nav {
+	grid-row-start: 2;
+	grid-row-end: 4;
+	grid-column-start: 1;
+	grid-column-end: 2;
+	background-color: #5097d5;
+  }
+
+  /* Here, I'm making the nav ul links appear without the bullet points they originally came with, 
+  and the padding is 30px */
+  nav ul {
+	list-style: none;
+	padding: 30px
+  }
+
+  /* Here, I'm setting the text decoration to none to remove the link underlines and setting the nav ul a text color to deep navy 
+  (the same as the header) */
+  nav ul li a {
+	text-decoration: none;
+	color: rgb(5, 5, 60);
+	font-size: 25px;
+	font-weight: bold;
+	text-align: left;
+  }
+
+  /* Here, I'm setting the color of the link that I'm currently hovering over to white */
+  nav a:hover {
+	color: white;
+}
+
+  /* Here, I'm making the content stretch from the 2nd to 3rd row and from the 2nd to 6th columns */
+  #content {
+	grid-row-start: 2;
+	grid-row-end: 3;
+	grid-column-start: 2;
+	grid-column-end: 6;
+	background-color: white;
+	padding-left: 30px;
+	padding-right: 30px;
+  }
+
+  /* Here, I'm setting the text "Enjoy Nature in Luxury" to a light blue */
+  h2 {
+	font-family: Georgia, "Times New Roman", serif;
+	grid-row: 2;
+	grid-column: 2;
+	color: #0085c7;
+	font-size: 30px;
+  }
+
+  /* Here, I'm setting the text "Pacific Trails Resort" to a light blue */
+  .resort {
+	color: #0085c7;
+  }
+
+  /* Here, I'm stretching the image "coast.jpg" from the second to third rows and from the second to third columns */
+  #content img {
+	grid-row-start: 2; 
+	grid-row-end: 3;
+	grid-column-start: 2; 
+	grid-column-end: 3;
+  }
+
+  /* Here, I'm setting the size of the paragraph within content p to 20px */
+  #content p {
+	grid-row-start: 2;
+	grid-row-end: 3;
+	grid-column-start: 4;
+	grid-column-end: 6;
+	font-size: 20px;
+  }
+
+  /* Here, I'm setting the bullet points of the content ui to marker.gif */
+  #content ul {
+	grid-row-start: 2;
+	grid-row-end: 3;
+	grid-column-start: 4;
+	grid-column-end: 6;
+	list-style-image: url(marker.gif);
+	font-size: 18px
+  }
+
+  /* Here, I'm making the contact stay within the 3rd row and stretch from the 2nd to 6th columns */
+  #contact {
+	grid-row: 3;
+	grid-column-start: 2;
+	grid-column-end: 6;
+	font-size: 17px;
+	color: rgb(83, 83, 83);
+	padding-left: 20px;
+	padding-bottom: 20px;
+  }
+
+  /* Here, I'm making the footer stay within the third row and stretch from the 2nd to 6th columns */
+  footer {
+	grid-row: 3;
+	grid-column-start: 2;
+	grid-column-end: 6;
+	background-color: white;
+	font-style: italic;
+	font-size: 12px;
+	color: darkgray;
+	padding-left: 20px;
+	padding-bottom: 20px;
+  }
